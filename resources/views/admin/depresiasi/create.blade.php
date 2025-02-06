@@ -12,9 +12,14 @@
             <input type="number" name="lama_depresiasi" class="form-control" required style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
         </div>
         <div class="mb-3">
-            <label style="font-weight: 500; font-size: 1rem; color: #4A4A4A;">Keterangan</label>
-            <input type="text" name="keterangan" class="form-control" maxlength="50" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
-        </div>
+    <label style="font-weight: 500; font-size: 1rem; color: #4A4A4A;">Keterangan</label>
+    <select name="keterangan" class="form-control" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <option value="baik">baik</option>
+        <option value="rusak">rusak</option>
+        <option value="sedang_di_servis">Sedang di Servis</option>
+    </select>
+</div>
+
         <div class="d-flex justify-content-between mt-4">
             <button type="submit" class="btn btn-gradient">Simpan</button>
             <a href="{{ auth()->user()->role === 'admin' ? route('admin.depresiasi.index') : route('depresiasi.index')  }}" class="btn btn-gradient-secondary">Batal</a>

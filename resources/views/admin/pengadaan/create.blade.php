@@ -113,10 +113,15 @@
             </select>
         </div>
 
-        <div class="form-group">
-            <label for="keterangan">Keterangan</label>
-            <input type="text" class="form-control" id="keterangan" name="keterangan" required>
-        </div>
+        <div class="mb-3">
+    <label style="font-weight: 500; font-size: 1rem; color: #4A4A4A;">Keterangan</label>
+    <select name="keterangan" class="form-control" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <option value="baik">baik</option>
+        <option value="rusak">rusak</option>
+        <option value="sedang_di_servis">Sedang di Servis</option>
+    </select>
+</div>
+
 
         <button type="submit" class="btn btn-primary mt-3">Simpan</button>
         <a href="{{ route('admin.pengadaan.index') }}" class="btn btn-secondary mt-3">Batal</a>

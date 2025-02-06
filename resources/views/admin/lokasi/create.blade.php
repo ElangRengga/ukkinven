@@ -16,10 +16,11 @@
                 <label for="kode_lokasi" class="form-label">Kode Lokasi</label>
                 <input type="text" class="form-control" id="kode_lokasi" name="kode_lokasi">
             </div>
-            <div class="mb-3">
-                <label for="keterangan" class="form-label">keterangan</label>
-                <textarea class="form-control" id="keterangan" name="keterangan"></textarea>
-            </div>
+            <select name="keterangan" class="form-control" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <option value="baik">baik</option>
+        <option value="rusak">rusak</option>
+        <option value="sedang_di_servis">Sedang di Servis</option>
+    </select>
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>

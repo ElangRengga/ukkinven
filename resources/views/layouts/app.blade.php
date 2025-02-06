@@ -16,12 +16,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <style>
+    /* Custom Styles */
+        <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
-            background: #f5f6f8;
-            color: #343a40;
+            background: #eef1f7;
+            color: #333;
         }
 
         .wrapper {
@@ -30,24 +31,25 @@
         }
 
         .c-sidebar {
-            width: 250px;
-            background: linear-gradient(135deg, #007bff, #343a40);
+            width: 260px;
+            background: linear-gradient(135deg, #0056b3, #00274d);
             color: #fff;
             position: fixed;
             top: 0;
             left: 0;
             height: 100%;
             z-index: 1020;
-            transition: left 0.3s ease, width 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .c-sidebar .c-sidebar-brand {
-            padding: 1rem;
+            padding: 1.2rem;
             text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
             color: #ffffff;
-            background-color: #007bff;
+            background-color: #0056b3;
             border-bottom: 2px solid #fff;
         }
 
@@ -55,24 +57,26 @@
             color: #fff;
             display: flex;
             align-items: center;
-            padding: 0.75rem 1rem;
+            padding: 0.8rem 1rem;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 5px;
         }
 
         .c-sidebar .c-sidebar-nav-item a:hover,
         .c-sidebar .c-sidebar-nav-link.active {
-            background-color: #0056b3;
+            background-color: #007bff;
             color: #ffffff;
+            transform: scale(1.05);
         }
 
         .c-sidebar .c-sidebar-nav-item a i {
             margin-right: 15px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .c-header {
-            background: #007bff;
+            background: #0056b3;
             color: white;
             padding: 1rem;
             z-index: 1030;
@@ -80,14 +84,9 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding-left: 250px;
-            border-bottom: 2px solid #fff;
-        }
-
-        .c-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding-left: 260px;
+            border-bottom: 2px solid #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .c-header .c-header-title {
@@ -96,47 +95,21 @@
             text-transform: uppercase;
         }
 
-        .c-header .user-info {
-            font-size: 1.2rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-
-        .c-header .user-info span {
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .c-header .user-info .bi-person-circle {
-            font-size: 1.5rem;
-            margin-right: 10px;
-        }
-
         .c-content {
-            margin-left: 250px;
+            margin-left: 260px;
             padding: 2rem;
             width: 100%;
             padding-top: 80px;
+            transition: margin-left 0.3s ease;
         }
 
         .dashboard-header {
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            background: linear-gradient(135deg, #ffffff, #eef1f7);
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-top: 80px;
             transition: all 0.3s ease;
-        }
-
-        .dashboard-header .user-info {
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        .dashboard-header .user-info span {
-            font-weight: bold;
-            color: #007bff;
         }
 
         /* Hover effect on Sidebar */
@@ -175,7 +148,7 @@
             width: 100%;
             text-align: left;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .logout-btn:hover {
@@ -186,7 +159,8 @@
         .logout-btn i {
             margin-right: 10px;
         }
-    </style>
+        </style>
+
 </head>
 
 <body>

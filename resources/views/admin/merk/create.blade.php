@@ -13,8 +13,12 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
+        <select name="keterangan" class="form-control" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <option value="aktif">pcs</option>
+        <option value="bangkrut">box</option>
+    </select>
         <div class="mb-3">
-            <label for="keterangan" class="form-label">keterangan</label>
+            <label for="satuan" class="form-label">jumlah</label>
             <input type="text" name="keterangan" id="keterangan" class="form-control @error('keterangan') is-invalid @enderror" value="{{ old('keterangan') }}">
             @error('keterangan')
                 <div class="invalid-feedback">{{ $message }}</div>

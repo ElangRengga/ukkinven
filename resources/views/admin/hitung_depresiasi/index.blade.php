@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    .table th, .table td {
+        color: white; /* Menentukan warna font menjadi putih */
+    }
+</style>
+
 <div class="container mt-4">
     <h1 class="mb-3">Daftar Hitung Depresiasi</h1>
     <a href="{{ route('admin.hitung_depresiasi.create') }}" class="btn btn-primary mb-3">
@@ -29,10 +35,9 @@
                         <td>{{ optional($depresiasi->pengadaan->masterBarang)->nama_barang ?? '-' }}</td>
                         <td>{{ \Carbon\Carbon::parse($depresiasi->tgl_hitung_depresiasi)->format('d-m-Y') }}</td>
                         <td>
-                            {{-- Menghitung lama depresiasi dalam bulan --}}
                             @php
                                 $lama_depresiasi_tahun = optional($depresiasi->pengadaan->depresiasi)->lama_depresiasi;
-                                $lama_depresiasi_bulan = $lama_depresiasi_tahun * 12; // Ubah tahun ke bulan
+                                $lama_depresiasi_bulan = $lama_depresiasi_tahun * 12; 
                             @endphp
                             {{ $lama_depresiasi_bulan ?? '-' }} bulan
                         </td>

@@ -6,7 +6,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1 class="fw-bold text-primary">Asset Management Dashboard</h1>
+            <h1 class="fw-bold text-primary">Selamat datang di Management pergudangan</h1>
             <p class="text-muted">Kelola aset Anda dengan mudah dan cepat.</p>
         </div>
     </div>

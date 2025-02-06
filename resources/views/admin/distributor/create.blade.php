@@ -34,13 +34,10 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="mb-3">
-                <label for="keterangan" class="form-label">Keterangan</label>
-                <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan') }}">
-                @error('keterangan')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
+            <select name="keterangan" class="form-control" style="padding: 0.9rem; font-size: 1rem; border-radius: 5px; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <option value="aktif">aktif</option>
+        <option value="bangkrut">bangkrut</option>
+    </select>
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="{{ route('admin.distributor.index') }}" class="btn btn-secondary">Kembali</a>
         </form>

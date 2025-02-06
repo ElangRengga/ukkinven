@@ -10,7 +10,7 @@
         @else
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
-                    <thead class="table-dark">
+                    <thead class="">
                         <tr>
                             <th>Kode Pengadaan</th>
                             <th>Nama Barang</th>

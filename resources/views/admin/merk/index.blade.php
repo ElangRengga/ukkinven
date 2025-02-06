@@ -18,6 +18,7 @@
                 <th>#</th>
                 <th>Nama Merk</th>
                 <th>keterangan</th>
+                <th>satuan</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $id->merk }}</td>
+                    <td>{{ $id->satuan }}</td>
                     <td>{{ $id->keterangan }}</td>
                     <td>
                         <a href="{{ route('admin.merk.edit', $id->id_merk) }}" class="btn btn-warning btn-sm">Edit</a>
